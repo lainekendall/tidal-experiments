@@ -1,0 +1,15 @@
+d1 $ s "bd odx*2 [pluck pluck:1]"
+t2 (xfadeIn 8) $ palindrome $ s "jvbass jvbass odx*3 jvbass:2"
+t3 (xfadeIn 16) $ every 4 (rev) $ s "bd sn:2 house less"
+t1 (xfadeIn 4) $ s "pluck*8" # n "a5 g5 c c"
+d4 $ s "pluck*8" # n "1 5 2 4 6 1 1 1" # speed "-1"
+d4 $ every 4 (fast 2) $ s "tink*4" # gain 1
+t3 (xfadeIn 4) $ palindrome $ s "pluck*8" # n "1 6 3 6 2 3 2 1"
+
+d1 $ palindrome $ s "bd*3 sn:2" # gain 0.8
+d2 $ s "flick" # gain 0.4
+t3 (xfadeIn 16) $ s "jvbass" # n "1 3 2 2"
+t5 (xfadeIn 4) $ s "jvbass"
+t5 silence
+d2 silence
+hush

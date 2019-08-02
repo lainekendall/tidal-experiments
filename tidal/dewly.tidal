@@ -1,0 +1,15 @@
+d1 $ sound "bd:3 feel"
+d2 $ palindrome $ sound "bd*2 ~ odx:2" # n "2 3 4"
+d3 $ sound "gabba" # gain 0.5
+d4 $ sound "gabba odx odx:4" # n "1 2 3"
+d2 $ silence
+d5 $ fastcat [sound "odx*4" , sound "industrial*2" , sound "koy"] # pan 1
+d6 $ palindrome $ sound "co:2, psr*2, kurt*6" # gain 0.2
+d1 $ stack [sound "koy" , sound "hh/2" , sound "hc:3"]
+d3 $ sound "arpy:3 arpy:2 arpy:1" # n "f m f"
+d4 $ (every 4) (rev) (sound "arpy:0*3 arpy:1*2")
+t4 $ clutch $ sound "[hh, sn]"
+d6 $ sound "gretsch*2 sn ~ ~ numbers:3"
+d7 $ sound "procshort*4 numbers:2 numbers:0 bleep*5 bleep:2*2 bleep:3*2" # n "1 2 3 4 5 6" # speed 0.8
+d1 $ sound "padlong*2" # gain 1 # pan 0.5
+hush

@@ -1,0 +1,14 @@
+d1 $ s "flick"
+t1 (xfadeIn 8) $ s "bd kurt:2 metal wobble odx*3 sid feel:2"
+d2 $ fast 2 $ s "stab*2 jvbass:1 jvbass:2" # resonance 2
+d2 $ fast 2 $ every 4 (rev) $ s "psr less odx*2"
+t1 (xfadeIn 16) $ palindrome $ s "odx*8" # n "g5 f*2 a5*2 c*3" # speed "-1"
+t2 (xfadeIn 4) $ s "tink*4" # n "1 5 2 2" # resonance 1 # gain 1.3
+d1 $ s "supersquare*2 jvbass latibro*2" # n "g5 a5 c*2 f7 f*2"
+hush
+
+d1 $ every 4 (fast 2) $ s "house house:2 tink arp"
+d1 $ every 4 (fast 2) $ s "bd sn:2 house less"
+t2 (xfadeIn 8) $ s "pluck:3 pluck:2 pluck:1" # speed "-1.2"
+d3 $ palindrome $ s "odx*3 psr less*2 sn*3"
+t3 (xfadeIn 4) $ palindrome $ s "odx*3 psr less*2 sn*3" # gain "0.9"

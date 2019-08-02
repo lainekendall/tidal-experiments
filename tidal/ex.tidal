@@ -1,0 +1,31 @@
+d6 $ s "supernoise/8" # midinote ((irand 10) + 30) # sustain "8"
+ # accelerate "0.5" # voice "0.5" # pitch1 "0.15" # slide "-0.5" # resonance "0.7"
+ # attack "1" # release "20" # room "0.9" # size "0.9" # orbit "1"
+d4 $ sound "bd*3"
+d5 $ sound (every 4 (fast 4) "bd*3 [bd [sn sn*3 sn] sn]")
+d6 $ gain "1 0.8 0.5 0.7" # sound "sn"
+d4 $ jux (density 0.5) $ sound (samples "mouth mouth mouth can bottle" (slow 6 "0 1 2 5 5"))
+d5 $ every 4 (rev) $ n "<[g5 df5 d5 a5] [gf5 d5 c5 g5]*1>" # s "supersquare"
+d5 silence
+d5 $ every 16 (density 24 . (|+| midinote "24") . (# sustain "0.3") . (# attack "0.05"))
+  $ s "supercomparator/4" # midinote ((irand 24) + 24)
+  # sustain "8" # attack "0.5" # hold "4" # release "4"
+  # voice "0.5" # resonance "0.9" # lfo "1" # speed "30" # pitch1 "4"
+d4 $ sound "mt*2"
+d5 $ sound $ samples "tink*4" "0 1 2 3"
+d4 silence
+d5 silence
+d4 $ sound "sn*4"
+d5 $ s "house:5"
+d5 $ sound $ samples "house*4" "2 3 4 5"
+d5 $ every 4 (rev) $ n "<[g5 df5 d5 a5] [gf5 d5 c5 g5]*3>" # s "supersquare"
+d4 $ sound (samples "{~ ~ bd*3, lt*2}" ("{ 0 1 2}"))
+d4 $ sound (samples "{jazz ~ ~, lt*2}" ("{ 0 1 2}"))
+d1 $ s "mt"
+d4 $ sound (samples "{jazz ~ bd*3, sn*2, numbers lt [mt sn, lt*3 rave] sn bird3*2}" ("{7 2, 3 1 5}")) # end rand
+d5 $ stack [
+            sound (samples "crow*8" (run 8)) # speed "0.25" # cut "1",
+            sound (samples "bass0*6" (run 6)) # speed "0.5" # cut "2" ]
+d5 $ stack [
+            sound (samples "gaba*2" (run 8)) # speed "0.25" # cut "1",
+            sound (samples "tabla*2" (run 6)) # speed "0.5" # cut "2" ]
